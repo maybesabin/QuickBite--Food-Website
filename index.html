@@ -9,19 +9,81 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="icon" href="images/logo.png">
 </head>
 
 
 <body>
     
     <!--Navbar-->
-    <nav>
-        
+    <nav class=" flex p-2 gap-4 top-[0%] items-center justify-around ">
+        <img class="w-[60px] pt-4 pb-4 h-auto" src="images/logo.png" alt="food-vector">
+        <ul class="flex gap-12">
+            <li><a href="#header">Home</a> </li>
+            <li><a href="#quickbite">QuickBite</a> </li>
+            <li><a href="#">Menu</a> </li>
+            <li><a href="#">Location</a> </li>
+            <li><a href="#">Gallery</a> </li>
+            <li><a href="#">Vacancy</a> </li>
+            <li><a href="#">News</a> </li>
+            <li><a href="#">Contact</a> </li>
+        </ul>
+
+        <button id="order-btn">
+            Order from UberEats
+        </button>
+
     </nav>
 
 
+
+
+    <!--Hero Section-->
     
+    <header id="header" class="section h-[90vh] flex items-center justify-around ">
+        <div class="flex flex-col gap-10 justify-center items-start">
+            <h1>
+                Welcome to QuickBite !
+            </h1>
+
+            <h2>
+                Savor the flavor of authentic mealss
+            </h2>
+
+            <button id="hero-btn" class="btn" >
+                See Menu
+            </button>
+        </div>
+
+        <div id="rotate-img" >
+            <img width="420px" src="images/mainimage.png" alt="">
+        </div>  
+    </header>
+
+
+
+    <!--QuickBite Section-->
+
+    <section id="quickbite" class="section h-[90vh] flex items-center justify-center">
+        <div class="flex flex-col gap-10 justify-center items-start w-[55%]">
+            <h1>
+                Our Story
+            </h1>
+
+            <h2 class="w-[70%]" >
+                Our Vietnamese restaurant is rooted in a love for sharing the authentic flavors of our culture through fresh, traditional dishes. Come savor the stories of Vietnam with us.
+            </h2>
+
+            <button id="hero-btn" class="btn" >
+                Learn More
+            </button>
+        </div>
+
+ 
+        <img width="420px" src="images/waitress.jpg" alt="">
+
+    </section>
+
     <script src="index.js"></script>
 </body>
 </html>

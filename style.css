@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    font-family: var(--font);
 }
 
 
@@ -14,3 +17,110 @@
     --very-small-font: 12px;
     --font: 'Poppins', sans-serif;
 }
+
+/*Animations*/
+
+/*image border rotate*/
+    @keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/*show and hide*/
+
+
+
+/* Nav Bar */
+
+nav{
+    font-family: var(--font);
+    position: sticky;
+    z-index: 1000;
+    background-color: #f9f9f9;
+}
+
+nav ul li{
+    opacity: 70%;
+    transition: .4s;
+}
+
+nav ul li:hover{
+    opacity: 100%;
+    color: var(--maincolor);
+    transition: .4s;
+}
+
+#order-btn{
+    background-color: var(--maincolor);
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+    font-size: var(--small-font);
+}
+
+
+/* Section CSS */
+
+.section h1{
+    font-size: var(--big-font);
+    font-family: var(--font);
+    font-weight: 700;
+}
+
+.section h2{
+    font-size: var(--medium-font);
+}
+
+
+
+/*Button Animation*/
+
+.btn{
+    border: 2px solid var(--maincolor);
+    padding: 5px 20px;
+    color: var(--maincolor);
+    border-radius: 30px;
+    transition: .5s;
+    background: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn:hover{
+    color: white;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--maincolor);
+    z-index: -1;
+    transition: .5s;
+    top: 0; 
+}
+
+.btn:hover::before{
+    width: 100%;
+}
+
+#rotate-img{
+    border-top: 15px solid black;
+    border-bottom: 15px solid #ec1c24;
+    border-left: 15px solid black;
+    border-right: 15px solid #ec1c24;
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+}
+
+
+
+
+
