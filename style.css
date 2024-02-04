@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --maincolor: #ec1c24;
+    --bgcolor: #ffffff;
+    --big-font: 50px;
+    --medium-font: 20px;
+    --small-font: 14px;
+    --very-small-font: 12px;
+    --font: 'Poppins', sans-serif;
+}
