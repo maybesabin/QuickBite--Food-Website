@@ -7,7 +7,6 @@
     font-family: var(--font);
 }
 
-
 :root{
     --maincolor: #ec1c24;
     --bgcolor: #ffffff;
@@ -17,6 +16,30 @@
     --very-small-font: 12px;
     --font: 'Poppins', sans-serif;
 }
+
+
+/*==================== Media Queries ====================*/
+
+/*Mobile*/
+@media screen and (max-width: 640px) {
+    :root {
+      --big-font: 20px;
+      --medium-font: 16px;
+      --small-font: 10px;
+      --very-small-font: 7px;
+    }
+}
+
+/*Medium Screen */
+@media screen and (max-width: 1200px) {
+    :root {
+      --big-font: 30px;
+      --medium-font: 20px;
+      --small-font: 15px;
+      --very-small-font: 10px;
+    }
+  }
+
 
 /*Animations*/
 @keyframes fade{
@@ -53,6 +76,19 @@
     to{
         opacity: 1;
         transform: translateX(0px);
+    }
+}
+
+@keyframes popout{
+    from{
+        opacity: 0;
+        transform: scale(-1);
+    }
+
+
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -107,12 +143,26 @@ nav ul li:hover{
     transition: .4s;
 }
 
-#order-btn{
+#order-btn, #order-btn2{
     background-color: var(--maincolor);
     padding: 10px 20px;
     border-radius: 30px;
     color: white;
     font-size: var(--small-font);
+}
+
+#order-btn2{
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    #order-btn{
+        display: none;
+    }
+
+    #order-btn2{
+        display: flex;
+    }
 }
 
 
@@ -122,15 +172,9 @@ nav ul li:hover{
     font-size: var(--big-font);
     font-family: var(--font);
     font-weight: 700;
-    animation: fadetop linear both;
-    animation-timeline: view();
-    animation-range: entry 50% cover 50%;
 }
 
 .section h2{
-    animation: faderight linear both;
-    animation-timeline: view();
-    animation-range: entry 50% cover 30%;
     font-size: var(--medium-font);
 }
 
@@ -178,17 +222,63 @@ nav ul li:hover{
     animation: rotate 10s linear infinite;
 }
 
-
-
-#menu, #quickbite{
-    animation: fade linear both;
-    animation-timeline: view();
-    animation-range: entry 50% cover 50%;
-}
-
-
-
-
 #header{
     animation: dropdown 2s ease-in-out  ;
 }
+
+
+/*Location*/
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    gap: 2rem;
+}
+
+.card-container div{
+    border-radius: 25px;
+}
+
+.card-container div img{
+    border-radius: 25px 25px 0 0;
+}
+
+.card-texts{
+    padding: 0 0 20px 10px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+    box-shadow: 1px 1px 5px 1px #d4d3d3;
+}
+
+.card-texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1.5rem;
+}
+
+#location{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.texts{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 2rem;
+}
+
+.texts h2{
+    width: 70%;
+}
+
+
